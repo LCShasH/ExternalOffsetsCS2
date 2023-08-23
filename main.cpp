@@ -23,7 +23,7 @@ int main() {
 	auto ptrToListElement = g_pMemorySystem->RPM<std::uintptr_t>(ptrToBaseInterface + 0x198);
 
 	// Getting our type scope for "client.dll" module
-	auto ptrToScope = g_pMemorySystem->RPM<CSchemaSystemTypeScope*>(ptrToListElement + (0xF * 8));
+	auto ptrToScope = g_pMemorySystem->RPM<CSchemaSystemTypeScope*>(ptrToListElement + (0x10 * 8));
 
 	auto pTable = ptrToScope->GetBindingsTable();
 
