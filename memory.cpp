@@ -68,10 +68,9 @@ void CMemorySystem::CollectModules() noexcept {
 }
 
 std::string CMemorySystem::RPMString(std::uintptr_t address) {
-	char* pBuffer = new char[128];
+	std::string pBuffer( 128, '\0' );
 
-	ReadProcessMemory(m_hProcessHandle, LPVOID(address), pBuffer, 128, 0);
-	pBuffer[127] = '\0';
+	ReadProcessMemory(m_hProcessHandle, LPVOID(address), pBuffer.data( ), pBuffer.size( ), 0);
 
 	return std::string(pBuffer);
 }
