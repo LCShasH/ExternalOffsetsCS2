@@ -2,7 +2,7 @@
 
 #include "sdk.hpp"
 
-auto schema_offset = 0x586B0;
+auto schema_offset = 0x5C770;
 
 int main() {
 	g_pMemorySystem->Initialize();
