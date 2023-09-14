@@ -46,6 +46,6 @@ class CSchemaSystemTypeScope
 {
 public:
 	CUtlTSHash< CSchemaClassBindingBase*, 256, unsigned int > GetBindingsTable() {
-		return g_pMemorySystem->RPM< CUtlTSHash< CSchemaClassBindingBase*, 256, unsigned int > >(std::uintptr_t(this) + 0x558);
+		return g_pMemorySystem->RPM< CUtlTSHash< CSchemaClassBindingBase*, 256, unsigned int > >(std::uintptr_t(this) + 0x588);
 	};
 };
